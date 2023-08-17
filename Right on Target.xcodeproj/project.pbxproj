@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8833ABF52A8E7A3900F571AB /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833ABF42A8E7A3900F571AB /* Game.swift */; };
 		8873B8302A8A7BE100C7DDBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873B82F2A8A7BE100C7DDBF /* AppDelegate.swift */; };
 		8873B8322A8A7BE100C7DDBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873B8312A8A7BE100C7DDBF /* SceneDelegate.swift */; };
 		8873B8342A8A7BE100C7DDBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873B8332A8A7BE100C7DDBF /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8833ABF42A8E7A3900F571AB /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		8873B82C2A8A7BE100C7DDBF /* Right on Target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Right on Target.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8873B82F2A8A7BE100C7DDBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8873B8312A8A7BE100C7DDBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8833ABF32A8E7A0900F571AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8833ABF42A8E7A3900F571AB /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8873B8232A8A7BE100C7DDBF = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		8873B82E2A8A7BE100C7DDBF /* Right on Target */ = {
 			isa = PBXGroup;
 			children = (
+				8833ABF32A8E7A0900F571AB /* Model */,
 				8873B82F2A8A7BE100C7DDBF /* AppDelegate.swift */,
 				8873B8312A8A7BE100C7DDBF /* SceneDelegate.swift */,
 				8873B8332A8A7BE100C7DDBF /* ViewController.swift */,
@@ -141,6 +152,7 @@
 				8873B8342A8A7BE100C7DDBF /* ViewController.swift in Sources */,
 				8873B8302A8A7BE100C7DDBF /* AppDelegate.swift in Sources */,
 				8873B8322A8A7BE100C7DDBF /* SceneDelegate.swift in Sources */,
+				8833ABF52A8E7A3900F571AB /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +310,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "my-company.Right-on-Target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -325,7 +337,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "my-company.Right-on-Target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
