@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		8833ABF52A8E7A3900F571AB /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833ABF42A8E7A3900F571AB /* Game.swift */; };
+		8833ABF72A8EC3C400F571AB /* GameFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833ABF62A8EC3C400F571AB /* GameFactory.swift */; };
+		8833ABF92A8EC3DB00F571AB /* SecretValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833ABF82A8EC3DB00F571AB /* SecretValue.swift */; };
+		8833ABFD2A8FF7D400F571AB /* GuessColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833ABFC2A8FF7D400F571AB /* GuessColorViewController.swift */; };
+		8833ABFF2A8FF9E800F571AB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833ABFE2A8FF9E800F571AB /* MainViewController.swift */; };
+		8833AC012A914A1900F571AB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833AC002A914A1900F571AB /* Color.swift */; };
 		8873B8302A8A7BE100C7DDBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873B82F2A8A7BE100C7DDBF /* AppDelegate.swift */; };
 		8873B8322A8A7BE100C7DDBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873B8312A8A7BE100C7DDBF /* SceneDelegate.swift */; };
-		8873B8342A8A7BE100C7DDBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873B8332A8A7BE100C7DDBF /* ViewController.swift */; };
+		8873B8342A8A7BE100C7DDBF /* GuessNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873B8332A8A7BE100C7DDBF /* GuessNumberViewController.swift */; };
 		8873B8372A8A7BE100C7DDBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8873B8352A8A7BE100C7DDBF /* Main.storyboard */; };
 		8873B8392A8A7BE200C7DDBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8873B8382A8A7BE200C7DDBF /* Assets.xcassets */; };
 		8873B83C2A8A7BE200C7DDBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8873B83A2A8A7BE200C7DDBF /* LaunchScreen.storyboard */; };
@@ -18,10 +23,15 @@
 
 /* Begin PBXFileReference section */
 		8833ABF42A8E7A3900F571AB /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		8833ABF62A8EC3C400F571AB /* GameFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFactory.swift; sourceTree = "<group>"; };
+		8833ABF82A8EC3DB00F571AB /* SecretValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretValue.swift; sourceTree = "<group>"; };
+		8833ABFC2A8FF7D400F571AB /* GuessColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessColorViewController.swift; sourceTree = "<group>"; };
+		8833ABFE2A8FF9E800F571AB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8833AC002A914A1900F571AB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8873B82C2A8A7BE100C7DDBF /* Right on Target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Right on Target.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8873B82F2A8A7BE100C7DDBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8873B8312A8A7BE100C7DDBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8873B8332A8A7BE100C7DDBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8873B8332A8A7BE100C7DDBF /* GuessNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessNumberViewController.swift; sourceTree = "<group>"; };
 		8873B8362A8A7BE100C7DDBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8873B8382A8A7BE200C7DDBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8873B83B2A8A7BE200C7DDBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +53,9 @@
 			isa = PBXGroup;
 			children = (
 				8833ABF42A8E7A3900F571AB /* Game.swift */,
+				8833ABF62A8EC3C400F571AB /* GameFactory.swift */,
+				8833ABF82A8EC3DB00F571AB /* SecretValue.swift */,
+				8833AC002A914A1900F571AB /* Color.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -69,11 +82,13 @@
 				8833ABF32A8E7A0900F571AB /* Model */,
 				8873B82F2A8A7BE100C7DDBF /* AppDelegate.swift */,
 				8873B8312A8A7BE100C7DDBF /* SceneDelegate.swift */,
-				8873B8332A8A7BE100C7DDBF /* ViewController.swift */,
+				8873B8332A8A7BE100C7DDBF /* GuessNumberViewController.swift */,
 				8873B8352A8A7BE100C7DDBF /* Main.storyboard */,
 				8873B8382A8A7BE200C7DDBF /* Assets.xcassets */,
 				8873B83A2A8A7BE200C7DDBF /* LaunchScreen.storyboard */,
 				8873B83D2A8A7BE200C7DDBF /* Info.plist */,
+				8833ABFC2A8FF7D400F571AB /* GuessColorViewController.swift */,
+				8833ABFE2A8FF9E800F571AB /* MainViewController.swift */,
 			);
 			path = "Right on Target";
 			sourceTree = "<group>";
@@ -149,10 +164,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8873B8342A8A7BE100C7DDBF /* ViewController.swift in Sources */,
+				8873B8342A8A7BE100C7DDBF /* GuessNumberViewController.swift in Sources */,
+				8833ABFD2A8FF7D400F571AB /* GuessColorViewController.swift in Sources */,
 				8873B8302A8A7BE100C7DDBF /* AppDelegate.swift in Sources */,
 				8873B8322A8A7BE100C7DDBF /* SceneDelegate.swift in Sources */,
 				8833ABF52A8E7A3900F571AB /* Game.swift in Sources */,
+				8833ABF92A8EC3DB00F571AB /* SecretValue.swift in Sources */,
+				8833ABF72A8EC3C400F571AB /* GameFactory.swift in Sources */,
+				8833ABFF2A8FF9E800F571AB /* MainViewController.swift in Sources */,
+				8833AC012A914A1900F571AB /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +330,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "my-company.Right-on-Target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -337,7 +357,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "my-company.Right-on-Target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

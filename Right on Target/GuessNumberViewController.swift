@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    var game: Game!
+class GuessNumberViewController: UIViewController {
+    var game: Game<SecretNumericValue>!
     
     @IBOutlet var slider: UISlider!
     @IBOutlet var label: UILabel!
@@ -18,17 +18,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        game = Game(startValue: 1, endValue: 50, rounds: 5)
-        updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
+        game = (GameFactory.getNumericGame() as! Game<SecretNumericValue>)
+        updateLabelWithSecretNumber(newText: String(game.secretValue.value))
     }
     
     // MARK: View - Model Interaction
     
     @IBAction func checkNumber() {
         // obtain slider value
-        let numSlider = Int(self.slider.value.rounded())
+        var userValue = game.secretValue
+        userValue.value = Int(slider.value.rounded())
         
-        game.calculateScore(with: numSlider)
+        game.calculateScore(secretValue: game.secretValue, userValue: userValue)
         
         if game.isGameEnded {
             showAlertWith(score: game.score)
@@ -37,7 +38,7 @@ class ViewController: UIViewController {
             game.startNewRound()
         }
         
-        updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
+        updateLabelWithSecretNumber(newText: String(game.secretValue.value))
     }
     
     // MARK: Update View
@@ -65,7 +66,5 @@ class ViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
-    
-    
 }
 
