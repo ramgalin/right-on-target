@@ -8,66 +8,54 @@
 import Foundation
 
 protocol GameProtocol {
+    associatedtype SecretValueType
+    
     var score: Int { get }
-    var currentSecretValue: Int { get }
+    var secretValue: SecretValueType { get }
     var isGameEnded: Bool { get }
     
     func restartGame()
     func startNewRound()
-    func calculateScore(with value: Int)
+    func calculateScore(secretValue: SecretValueType, userValue: SecretValueType)
 }
 
-class Game : GameProtocol {
+class Game<T: SecretValueProtocol> : GameProtocol {
+    typealias SecretValueType = T
+    
     var score: Int = 0
+    var secretValue: T
     
-    private var minSecretValue: Int
-    private var maxSecretValue: Int
-    
-    var currentSecretValue: Int = 0
-    
-    private var numOfRounds: Int
-    private var currentRound: Int = 1
+    private var compareClosure: (T, T) -> Int
+    private var roundsCount: Int!
+    private var currentRoundNumber: Int = 0
     
     var isGameEnded: Bool {
-        if currentRound >= numOfRounds {
+        if currentRoundNumber == roundsCount {
             return true
         } else {
             return false
         }
     }
     
-    init?(startValue: Int, endValue: Int, rounds: Int) {
-        guard startValue <= endValue else {
-            return nil
-        }
-        
-        minSecretValue = startValue
-        maxSecretValue = endValue
-        
-        numOfRounds = rounds
-        currentSecretValue = self.getNewSecretValue()
+    init(secretValue: T, rounds: Int, compareClosure: @escaping (T,T) -> Int) {
+        self.secretValue = secretValue
+        self.roundsCount = rounds
+        self.compareClosure = compareClosure
+        startNewRound()
     }
     
     func restartGame() {
-        currentRound = 0
         score = 0
+        currentRoundNumber = 0
         startNewRound()
     }
     
     func startNewRound() {
-        currentSecretValue = self.getNewSecretValue()
-        currentRound += 1
+        currentRoundNumber += 1
+        self.secretValue.setRandomValue()
     }
     
-    private func getNewSecretValue() -> Int {
-        (minSecretValue...maxSecretValue).randomElement()!
-    }
-    
-    func calculateScore(with value: Int) {
-        if value > currentSecretValue {
-            score += 50 - value + currentSecretValue
-        } else {
-            score += 50 - currentSecretValue + value
-        }
+    func calculateScore(secretValue: T, userValue: T) {
+        score += compareClosure(secretValue, userValue)
     }
 }
